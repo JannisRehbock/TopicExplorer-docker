@@ -1,6 +1,6 @@
 FROM alpine/git AS git-repos
 WORKDIR /repos
-RUN git clone  https://github.com/hinneburg/TopicExplorer.git
+RUN git      clone  https://github.com/JannisRehbock/TopicExplorer.git
 RUN git clone https://github.com/hinneburg/CommandManager.git && \
     cd CommandManager && git checkout v1.0 && cd ../
 RUN git clone https://github.com/hinneburg/lucene-analyzer-treetagger.git &&\
@@ -79,7 +79,7 @@ RUN  cd  /topicexplorer/install \
      && ./install_te_production_directories.sh /topicexplorer/distribution \
      && mkdir -p /topicexplorer/te-production/helper/te_config_template_jp
 
-COPY ./te_config_template_jp/ /topicexplorer/te-production/helper/te_config_template_jp/
+COPY  ./te_config_template_jp/ /topicexplorer/te-production/helper/te_config_template_jp/
 
 # Save the basic web apps in another folder to copy them back into fresh volumes
 RUN mkdir -p /topicexplorer/apache-tomcat-6.0.53/webapp_basics \

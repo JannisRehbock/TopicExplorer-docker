@@ -1,6 +1,6 @@
 [mysqld]
 local-infile=1
-innodb_buffer_pool_size=4GB
+innodb_buffer_pool_size=1GB
 ft_min_word_len=1
 group_concat_max_len=1000000
 
